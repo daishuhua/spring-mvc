@@ -195,11 +195,38 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <div class="form-group">
-                                    <div class="col-lg-5 col-sm-offset-3">
-                                        <button type="submit" class="btn btn-primary btn-block">保存</button>
+                                    <label class="control-label col-lg-3">账户状态</label>
+                                    <div class="col-lg-2">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="Enabled" name="Enabled" value="on" checked>账户有效
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="Locked" name="Locked" value="">账户锁定
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="credentialsExpired" name="credentialsExpired" value="">证书过期
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="accountExpired" name="accountExpired" value="">账号过期
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div> <!-- /.form-group -->
+                                <!-- Button -->
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="submit"></label>
+                                    <div class="col-lg-5">
+                                        <button id="submit" type="submit" class="btn btn-primary btn-block">提交</button>
                                     </div>
                                 </div>
                                 <input type="hidden" name="id" value="${user.id}"/>
