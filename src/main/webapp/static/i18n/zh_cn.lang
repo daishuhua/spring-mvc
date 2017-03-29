@@ -1,0 +1,15 @@
+{
+    "loadingRecords": "加载中...",
+    "lengthMenu": "每页显示 _MENU_ 条纪录",
+    "emptyTable": "表中没有可用数据",
+    "zeroRecords": "没有找到匹配纪录",
+    "info": "显示 _PAGES_ 页中的第 _PAGE_ 页",
+    "infoEmpty": "没有记录",
+    "infoFiltered": "(filtered from _MAX_ total records)",
+    "paginate" : {
+        "first":      "首页",
+        "last":       "末页",
+        "next":       "下页",
+        "previous":   "前页"
+    }
+}
