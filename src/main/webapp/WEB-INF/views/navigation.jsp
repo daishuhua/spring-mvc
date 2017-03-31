@@ -9,6 +9,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<!-- Navigation -->
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -17,7 +18,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">XXXX管理系统</a>
+        <a class="navbar-brand" href="/">国安社区科技(北京)XX信息管理系统</a>
     </div>
     <!-- /.navbar-header -->
 
@@ -28,12 +29,12 @@
                 <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
-                <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                <li><a href="#"><i class="fa fa-user fa-fw"></i>用户信息</a>
                 </li>
-                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                <li><a href="#"><i class="fa fa-gear fa-fw"></i>设置</a>
                 </li>
                 <li class="divider"></li>
-                <li><a href="/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                <li><a href="/logout"><i class="fa fa-sign-out fa-fw"></i>登出</a>
                 </li>
             </ul>
             <!-- /.dropdown-user -->
@@ -57,16 +58,40 @@
                     <!-- /input-group -->
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-key fa-fw"></i>权限管理<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-key fa-fw"></i>用户权限管理<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="/user/list">用户管理</a>
+                            <a href="#">用户维护<span class="fa arrow"></span></span></a>
+                            <ul class="nav nav-third-level">
+                                <li>
+                                    <a href="/user/list" id="userlist">用户列表</a>
+                                </li>
+                                <li>
+                                    <a href="/user/newuser">新建用户</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="/role/list">角色管理</a>
+                            <a href="#">角色管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li>
+                                    <a href="/role/list">角色列表</a>
+                                </li>
+                                <li>
+                                    <a href="/role/newrole">新建角色</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="/resource/list">资源管理</a>
+                            <a href="#">资源管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li>
+                                    <a href="/resource/list">资源列表</a>
+                                </li>
+                                <li>
+                                    <a href="/resource/list">增加资源</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->

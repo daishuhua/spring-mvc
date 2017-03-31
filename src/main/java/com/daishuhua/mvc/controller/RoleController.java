@@ -4,10 +4,12 @@ import com.daishuhua.mvc.model.Role;
 import com.daishuhua.mvc.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -23,11 +25,16 @@ public class RoleController {
     @Autowired
     RoleService roleService;
 
-    @RequestMapping(value = {"/list"}, method = RequestMethod.GET)
-    public String listRoles(ModelMap modelMap) {
-        List<Role> roleList = roleService.findAllRoles();
-        modelMap.addAttribute("roleList", roleList);
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    public String showRoleList() {
         return "rolelist";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = {"/list"}, method = RequestMethod.POST)
+    public List<Role> listRoles() {
+        List<Role> roleList = roleService.findAllRoles();
+        return roleList;
     }
 
     @RequestMapping(value = "/newrole", method = RequestMethod.GET)
@@ -37,7 +44,7 @@ public class RoleController {
         return "newrole";
     }
 
-    @RequestMapping(value = "/newrole", method = RequestMethod.POST)
+    @RequestMapping(value = "/saverole", method = RequestMethod.POST)
     public String saveRole(Role role) {
         roleService.saveRole(role);
         return "redirect:list";
