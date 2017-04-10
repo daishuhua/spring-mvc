@@ -46,19 +46,8 @@
     <div class="navbar-default sidebar" role="navigation">
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
-                <li class="sidebar-search">
-                    <div class="input-group custom-search-form">
-                        <input type="text" class="form-control" placeholder="Search...">
-                        <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                </span>
-                    </div>
-                    <!-- /input-group -->
-                </li>
                 <li>
-                    <a href="#"><i class="fa fa-key fa-fw"></i>用户权限管理<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-key fa-fw"></i>系统权限管理<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
                             <a href="#">用户维护<span class="fa arrow"></span></span></a>
@@ -86,7 +75,7 @@
                             <a href="#">资源管理<span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
                                 <li>
-                                    <a href="/resource/list">资源列表</a>
+                                    <a href="/resource/list">资源树</a>
                                 </li>
                                 <li>
                                     <a href="/resource/list">增加资源</a>
